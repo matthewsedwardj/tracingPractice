@@ -35,3 +35,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# p5.js files #
+###############
+p5.min.js
+p5.dom.min.js
