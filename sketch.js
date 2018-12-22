@@ -1,8 +1,8 @@
 const thickness = 5
-let name, points, word, letter, pointSize, score, stepBack, showText, showPoints, connectPoints;
+let name, points, font, word, letter, pointSize, score, stepBack, showText, showPoints, connectPoints;
 
 function preload() {
-  const font = loadFont('assets/Nunito-Regular.ttf');
+  font = loadFont('assets/Nunito-Regular.ttf');
 }
 
 function setup() {
@@ -13,7 +13,7 @@ function setup() {
 
   stepBack = createButton("Back");
 
-  name = createInput("Sprouts");
+  name = createInput("Sample");
   name.input(reset);
   points = font.textToPoints(name.value(), 0, (height + pointSize) / 2, pointSize);
 
@@ -32,7 +32,7 @@ function setup() {
   let again = createButton("Try Again");
   again.mousePressed(reset);
   reset();
-  stepBack.mousePressed(() => word.pop);
+  stepBack.mousePressed(() => word.pop());
 }
 
 function draw() {
